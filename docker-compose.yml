@@ -11,7 +11,7 @@ services:
     stop_grace_period: 1m
     command: "./wait-for db:3306 --timeout=720 -- nginx -g 'daemon off;'"
     ports:
-      - 4006:8080
+      - 80:8080
   api:
     environment:
       MEMPOOL_BACKEND: "none"
